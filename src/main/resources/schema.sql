@@ -1,0 +1,6 @@
+CREATE TABLE products (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(120) NOT NULL,
+    price DECIMAL(12, 2) NOT NULL CHECK (price > 0),
+    description VARCHAR(500)
+);
